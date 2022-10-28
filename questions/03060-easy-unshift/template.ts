@@ -1,1 +1,1 @@
-type Unshift<T, U> = any
+type Unshift<T, U> = T extends [...infer P] ? [U, ...P] : [U]
