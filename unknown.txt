@@ -1,3 +1,5 @@
 00898-easy-includes
 00012-medium-chainable-options
 00020-medium-promise-all
+00296-medium-permutation
+00459-medium-flatten
