@@ -1,1 +1,7 @@
-type KebabCase<S> = any
+type KebabCase<S extends string> = S extends `${infer First}${infer Rest}`
+  ? Rest extends Uncapitalize<Rest>
+    ? `${Uncapitalize<First>}${KebabCase<Rest>}`
+    : `${Uncapitalize<First>}-${KebabCase<Rest>}`
+  : S
+
+type A = KebabCase<'😎'>
